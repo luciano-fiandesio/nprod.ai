@@ -1,43 +1,52 @@
-# Astro Starter Kit: Minimal
+# nprod.ai
 
-```sh
-npm create astro@latest -- --template minimal
+**Independent AI & Software Studio**
+*Bridging decades of software architecture expertise with today's AI breakthroughs*
+
+## About Us
+
+nprod.ai builds AI-native products for ambitious teams. We combine deep software architecture experience with cutting-edge AI technology to create intelligent systems that learn, adapt, and scale.
+
+## What We Do
+
+We partner with teams to:
+- Design and build AI-powered products from concept to launch
+- Integrate AI capabilities into existing software systems
+- Architect scalable, intelligent solutions that solve real business problems
+- Deliver intelligent product teams on demand
+
+## Technology
+
+This repository powers our company website, built with:
+- [Astro](https://astro.build/) - Modern static site framework
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first styling
+- Responsive UI components inspired by shadcn
+
+## Get in Touch
+
+We'd love to hear about what you're building.
+
+- **Website**: [nprod.ai](https://nprod.ai)
+- **Email**: hello@nprod.ai
+- **LinkedIn**: [linkedin.com/company/nprod-ai](https://www.linkedin.com/company/nprod-ai)
+- **Location**: Saint Cloud, France
+
+## Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+---
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+� 2025 nprod.ai  Building the future of intelligent systems
