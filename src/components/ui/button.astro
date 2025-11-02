@@ -1,0 +1,39 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+import { cn } from '../../lib/utils';
+
+type ButtonProps = HTMLAttributes<'button'> & {
+  variant?: 'default' | 'secondary' | 'outline' | 'ghost';
+  size?: 'default' | 'sm' | 'lg' | 'icon';
+  href?: string;
+};
+
+const { variant = 'default', size = 'default', href, class: className, ...rest } = Astro.props as ButtonProps;
+
+const baseClasses =
+  'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50';
+
+const variants: Record<NonNullable<ButtonProps['variant']>, string> = {
+  default: 'bg-primary text-primary-foreground shadow hover:bg-primary/90 focus-visible:ring-primary',
+  secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/70 focus-visible:ring-primary',
+  outline: 'border border-border bg-transparent hover:bg-secondary/60 text-foreground focus-visible:ring-primary',
+  ghost: 'hover:bg-secondary/60 text-foreground focus-visible:ring-primary'
+};
+
+const sizes: Record<NonNullable<ButtonProps['size']>, string> = {
+  default: 'h-11 px-6 py-2',
+  sm: 'h-9 rounded-md px-3',
+  lg: 'h-12 rounded-md px-8 text-base',
+  icon: 'h-10 w-10'
+};
+
+const Tag = href ? 'a' : 'button';
+const attributes = {
+  ...rest,
+  class: cn(baseClasses, variants[variant], sizes[size], href ? 'no-underline' : '', className)
+};
+---
+
+<Tag {...attributes}>
+  <slot />
+</Tag>

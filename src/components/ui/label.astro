@@ -1,0 +1,15 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+import { cn } from '../../lib/utils';
+
+type LabelProps = HTMLAttributes<'label'>;
+
+const { class: className, ...rest } = Astro.props as LabelProps;
+---
+
+<label
+  {...rest}
+  class={cn('text-sm font-medium text-muted-foreground peer-disabled:cursor-not-allowed peer-disabled:opacity-70', className)}
+>
+  <slot />
+</label>

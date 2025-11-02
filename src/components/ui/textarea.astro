@@ -1,0 +1,16 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+import { cn } from '../../lib/utils';
+
+type TextareaProps = HTMLAttributes<'textarea'>;
+
+const { class: className, ...rest } = Astro.props as TextareaProps;
+---
+
+<textarea
+  {...rest}
+  class={cn(
+    'flex min-h-[120px] w-full rounded-md border border-border bg-background/60 px-4 py-3 text-sm text-foreground shadow-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/70 focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50',
+    className
+  )}
+/>

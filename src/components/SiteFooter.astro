@@ -1,0 +1,41 @@
+---
+import { cn } from '../lib/utils';
+import { CONTACT_ADDRESS_1, CONTACT_ADDRESS_2, CONTACT_EMAIL, CONTACT_PHONE, CONTACT_PHONE_DIGITS, LINKEDIN_URL } from '../data/company';
+
+const { class: className } = Astro.props;
+---
+
+<footer
+  class={cn(
+    'mx-auto w-full max-w-4xl px-6 pb-10 text-sm text-muted-foreground sm:px-8 lg:px-10',
+    className
+  )}
+>
+  <div class="grid gap-6 border-t border-border/40 py-6 text-left text-sm sm:grid-cols-3">
+    <div class="space-y-3">
+      <p class="text-[0.65rem] uppercase tracking-[0.4em] text-muted-foreground/70">Contact</p>
+      <div class="space-y-1.5 leading-relaxed">
+        <p>{CONTACT_ADDRESS_1}</p>
+        <p>{CONTACT_ADDRESS_2}</p>
+        <a class="block hover:text-foreground" href={`mailto:${CONTACT_EMAIL}`}>
+          {CONTACT_EMAIL}
+        </a>
+        <a class="block hover:text-foreground" href={`tel:${CONTACT_PHONE_DIGITS}`}>
+          {CONTACT_PHONE}
+        </a>
+      </div>
+    </div>
+    <div class="space-y-3">
+      <p class="text-[0.65rem] uppercase tracking-[0.4em] text-muted-foreground/70">Legal</p>
+      <a class="block hover:text-foreground" href="/mentions-legales">
+        Mentions Légales
+      </a>
+    </div>
+    <div class="space-y-3">
+      <p class="text-[0.65rem] uppercase tracking-[0.4em] text-muted-foreground/70">Social</p>
+      <a class="block hover:text-foreground" href={LINKEDIN_URL} target="_blank" rel="noreferrer">
+        LinkedIn
+      </a>
+    </div>
+  </div>
+</footer>
